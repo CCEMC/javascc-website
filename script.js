@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // 1. Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -96,7 +96,7 @@
             const username = usernameInput ? usernameInput.value : 'User';
 
             if (feedback) {
-                feedback.innerText = Welcome back, ! Authenticating profile...;
+                feedback.innerText = `Welcome back, ${username}! Authenticating profile...`;
             }
 
             setTimeout(() => {
@@ -105,9 +105,9 @@
                     loginModal.style.display = 'none';
                 }
                 if (loginTrigger) {
-                    loginTrigger.innerText = Account ();
+                    loginTrigger.innerText = `Account (${username})`;
                 }
-                alert(Signed in successfully as !);
+                alert(`Signed in successfully as ${username}!`);
             }, 1000);
         });
     }
