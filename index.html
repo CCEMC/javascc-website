@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascc | Dominate the Aether</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dynamic-bg"></div>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <img src="assets/logo.png" alt="javascc logo">
+                <span>javascc</span>
+            </div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#modules">Modules</a>
+                <a href="#changelog">Changelog</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Dominate the Aether</h1>
+            <p>The highest performance crystal and sword PvP utility client, precision-engineered for 1.21+.</p>
+            <div class="hero-actions">
+                <a href="#" class="btn primary-btn">Download v1.0</a>
+                <a href="#modules" class="btn secondary-btn">View Features</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="modules">
+        <div class="section-container">
+            <h2>Modules</h2>
+            <p class="section-subtitle">A comprehensive suite of tools built for absolute control.</p>
+            
+            <div class="category-grid">
+                <!-- Sword -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Sword</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>AutoShieldBreaker</li>
+                        <li>Criticals</li>
+                        <li>SafeAnchor</li>
+                    </ul>
+                </div>
+
+                <!-- Mace -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Mace</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>AutoMace <span>(Stun Slam)</span></li>
+                        <li>BreachSwap</li>
+                    </ul>
+                </div>
+
+                <!-- Spear -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Spear</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>(Coming Soon)</li>
+                    </ul>
+                </div>
+
+                <!-- Render -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Render</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>CustomHUD</li>
+                        <li>ClickGUI</li>
+                        <li>TitleScreen</li>
+                    </ul>
+                </div>
+
+                <!-- Misc / Client -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Misc & Client</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>(SnapTap Pending)</li>
+                        <li>(AutoClicker Pending)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="changelog">
+        <div class="section-container">
+            <h2>Changelog</h2>
+            <p class="section-subtitle">The evolution of javascc.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">July 21, 2026</div>
+                    <div class="timeline-content">
+                        <h3>v1.0 - Official Rebrand & Expansion</h3>
+                        <ul>
+                            <li>Rebranded entirely from AetherClient to <strong>javascc</strong>.</li>
+                            <li>Added <strong>Stun Slam</strong> to AutoMace: Automatically detects blocking, swaps to axe, breaks shield, and hits with mace.</li>
+                            <li>Added <strong>Swap Back</strong> logic to AutoShieldBreaker with tick-based Swap Delay.</li>
+                            <li>Introduced the <strong>Spear</strong> category into the ClickGUI.</li>
+                            <li>Implemented custom logo rendering across the ClickGUI and Main Menu.</li>
+                            <li>Updated Modrinth properties and metadata.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">July 19, 2026</div>
+                    <div class="timeline-content">
+                        <h3>Initial Combat Modules</h3>
+                        <ul>
+                            <li>Developed base Crystal and Sword functionality.</li>
+                            <li>Created the minimalist dark-mode ClickGUI.</li>
+                            <li>Built the CustomHUD module.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="javascc logo">
+                <span>javascc</span>
+            </div>
+            <p>&copy; 2026 javascc Team. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
