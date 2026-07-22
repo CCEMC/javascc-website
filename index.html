@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascc | Dominate the Aether</title>
+    <title>javascc | a mod that adds quality</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -21,6 +21,8 @@
             <div class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#modules">Modules</a>
+                <a href="#previews">Feature Previews</a>
+                <a href="#faq">FAQ</a>
                 <a href="#changelog">Changelog</a>
             </div>
         </div>
@@ -28,11 +30,12 @@
 
     <header id="hero">
         <div class="hero-content">
-            <h1>Dominate the Aether</h1>
-            <p>The highest performance crystal and sword PvP utility client, precision-engineered for 1.21+.</p>
+            <h1>javascc</h1>
+            <p class="hero-tagline">a mod that adds quality</p>
+            <p class="hero-subtext">The highest performance crystal and sword PvP utility client, precision-engineered for 1.21+.</p>
             <div class="hero-actions">
                 <a href="#" class="btn primary-btn">Download v1.0</a>
-                <a href="#modules" class="btn secondary-btn">View Features</a>
+                <a href="#previews" class="btn secondary-btn">Explore Features</a>
             </div>
         </div>
     </header>
@@ -40,7 +43,7 @@
     <section id="modules">
         <div class="section-container">
             <h2>Modules</h2>
-            <p class="section-subtitle">A comprehensive suite of tools built for absolute control.</p>
+            <p class="section-subtitle">A comprehensive suite of tools built for absolute combat control.</p>
             
             <div class="category-grid">
                 <!-- Sword -->
@@ -49,9 +52,31 @@
                         <h3>Sword</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoShieldBreaker</li>
-                        <li>Criticals</li>
-                        <li>SafeAnchor</li>
+                        <li>AutoShieldBreaker <span>Swap Back & Delay</span></li>
+                        <li>Criticals <span>Packet & Legit</span></li>
+                        <li>KillAura</li>
+                        <li>AimAssist</li>
+                        <li>Reach</li>
+                        <li>TriggerBot</li>
+                        <li>Hitboxes</li>
+                    </ul>
+                </div>
+
+                <!-- Crystal -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Crystal</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>AutoCrystal</li>
+                        <li>AutoHitCrystal</li>
+                        <li>SafeAnchor <span>Rot Smooth</span></li>
+                        <li>AnchorMacro</li>
+                        <li>Surround</li>
+                        <li>AutoTotem</li>
+                        <li>HoverTotem</li>
+                        <li>AutoArmor</li>
+                        <li>AutoExp <span>Look Down</span></li>
                     </ul>
                 </div>
 
@@ -61,8 +86,11 @@
                         <h3>Mace</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoMace <span>(Stun Slam)</span></li>
+                        <li>AutoMace <span>Stun Slam</span></li>
                         <li>BreachSwap</li>
+                        <li>AutoWindcharge</li>
+                        <li>KeyPearl</li>
+                        <li>AutoPearlCatch</li>
                     </ul>
                 </div>
 
@@ -72,7 +100,24 @@
                         <h3>Spear</h3>
                     </div>
                     <ul class="module-list">
-                        <li>(Coming Soon)</li>
+                        <li>SpearAssist <span>(In Dev)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Movement -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>Movement</h3>
+                    </div>
+                    <ul class="module-list">
+                        <li>Sprint</li>
+                        <li>Velocity</li>
+                        <li>NoSlow</li>
+                        <li>Flight</li>
+                        <li>Speed</li>
+                        <li>FakeLag</li>
+                        <li>NoFall</li>
+                        <li>Scaffold</li>
                     </ul>
                 </div>
 
@@ -83,20 +128,128 @@
                     </div>
                     <ul class="module-list">
                         <li>CustomHUD</li>
+                        <li>CustomHotbar</li>
                         <li>ClickGUI</li>
-                        <li>TitleScreen</li>
+                        <li>TargetHUD</li>
+                        <li>ArrayList</li>
+                        <li>ESP & XRay</li>
+                        <li>Fullbright & Freelook</li>
                     </ul>
                 </div>
 
-                <!-- Misc / Client -->
+                <!-- Misc & Player -->
                 <div class="category-card">
                     <div class="category-header">
-                        <h3>Misc & Client</h3>
+                        <h3>Misc & Player</h3>
                     </div>
                     <ul class="module-list">
-                        <li>(SnapTap Pending)</li>
-                        <li>(AutoClicker Pending)</li>
+                        <li>AutoClicker <span>Fast CPS</span></li>
+                        <li>SnapTap <span>SOCD Counter</span></li>
+                        <li>AutoTool</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Feature Previews -->
+    <section id="previews">
+        <div class="section-container">
+            <h2>Feature Previews</h2>
+            <p class="section-subtitle">Click a module below to inspect its key settings and mechanics.</p>
+
+            <div class="preview-tabs">
+                <button class="tab-btn active" onclick="showTab('automace')">AutoMace (Stun Slam)</button>
+                <button class="tab-btn" onclick="showTab('shieldbreaker')">AutoShieldBreaker</button>
+                <button class="tab-btn" onclick="showTab('safeanchor')">SafeAnchor</button>
+                <button class="tab-btn" onclick="showTab('snaptap')">SnapTap & AutoClicker</button>
+            </div>
+
+            <div class="preview-card-container">
+                <div id="tab-automace" class="tab-content active">
+                    <div class="preview-details">
+                        <h3>AutoMace + Stun Slam</h3>
+                        <p>Detects when opponents attempt to block with a shield. Automatically swaps to an axe to instantly break their guard before performing a high-velocity mace smash.</p>
+                        <div class="setting-tags">
+                            <span class="tag">Stun Slam: Enabled</span>
+                            <span class="tag">Swap Delay: 0-20 Ticks</span>
+                            <span class="tag">Silent Mode: Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-shieldbreaker" class="tab-content">
+                    <div class="preview-details">
+                        <h3>AutoShieldBreaker</h3>
+                        <p>Visibly or silently switches to your axe when attacking a blocking target. Features a customizable <strong>Swap Back</strong> setting and tick-based delay for seamless, natural movement.</p>
+                        <div class="setting-tags">
+                            <span class="tag">Swap Back: Toggle</span>
+                            <span class="tag">Swap Delay: Adjustable</span>
+                            <span class="tag">Silent: Network Packet Mode</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-safeanchor" class="tab-content">
+                    <div class="preview-details">
+                        <h3>SafeAnchor</h3>
+                        <p>Automatically places protective obsidian or blocks between you and active respawn anchors to prevent lethality, featuring smooth custom rotation limits up to 90°.</p>
+                        <div class="setting-tags">
+                            <span class="tag">Max Rot Speed: 90°</span>
+                            <span class="tag">Legit Flick</span>
+                            <span class="tag">Use Obsidian / Glowstone</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-snaptap" class="tab-content">
+                    <div class="preview-details">
+                        <h3>SnapTap & AutoClicker</h3>
+                        <p><strong>SnapTap:</strong> SOCD (Simultaneous Opposite Cardinal Direction) input priority for instantly sharper strafing.<br><strong>AutoClicker:</strong> Highly customized clicker located in the Misc category for precise CPS control.</p>
+                        <div class="setting-tags">
+                            <span class="tag">SnapTap: A/D SOCD</span>
+                            <span class="tag">AutoClicker: Misc Category</span>
+                            <span class="tag">Randomization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="section-container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about javascc.</p>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">Is javascc free?</button>
+                    <div class="faq-answer">
+                        <p>Yes! javascc is 100% free and open to the community.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What Minecraft versions are supported?</button>
+                    <div class="faq-answer">
+                        <p>javascc is built for Modern Minecraft on Fabric loader (1.21+), supporting all modern weapon mechanics like the Mace and Heavy Core combat.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I install javascc?</button>
+                    <div class="faq-answer">
+                        <p>Simply download <code>javascc v1.0.jar</code>, install Fabric Loader for Minecraft 1.21+, and drop the JAR directly into your <code>.minecraft/mods</code> folder (or your launcher instances directory).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I open the ClickGUI in-game?</button>
+                    <div class="faq-answer">
+                        <p>Press the default keybind (Right Shift) in-game to toggle the dark-mode ClickGUI screen.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,16 +262,17 @@
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">July 21, 2026</div>
+                    <div class="timeline-date">July 22, 2026</div>
                     <div class="timeline-content">
                         <h3>v1.0 - Official Rebrand & Expansion</h3>
                         <ul>
                             <li>Rebranded entirely from AetherClient to <strong>javascc</strong>.</li>
+                            <li>Official slogan adopted: <em>"a mod that adds quality"</em>.</li>
                             <li>Added <strong>Stun Slam</strong> to AutoMace: Automatically detects blocking, swaps to axe, breaks shield, and hits with mace.</li>
-                            <li>Added <strong>Swap Back</strong> logic to AutoShieldBreaker with tick-based Swap Delay.</li>
+                            <li>Added <strong>Swap Back</strong> logic & Swap Delay to AutoShieldBreaker.</li>
+                            <li>Integrated <strong>AutoClicker</strong> and <strong>SnapTap</strong> into the Misc category.</li>
                             <li>Introduced the <strong>Spear</strong> category into the ClickGUI.</li>
-                            <li>Implemented custom logo rendering across the ClickGUI and Main Menu.</li>
-                            <li>Updated Modrinth properties and metadata.</li>
+                            <li>Updated custom icon, credits, and export filename to <code>javascc v1.0.jar</code>.</li>
                         </ul>
                     </div>
                 </div>
@@ -130,7 +284,7 @@
                         <ul>
                             <li>Developed base Crystal and Sword functionality.</li>
                             <li>Created the minimalist dark-mode ClickGUI.</li>
-                            <li>Built the CustomHUD module.</li>
+                            <li>Built the CustomHUD and CustomHotbar modules.</li>
                         </ul>
                     </div>
                 </div>
@@ -144,7 +298,7 @@
                 <img src="assets/logo.png" alt="javascc logo">
                 <span>javascc</span>
             </div>
-            <p>&copy; 2026 javascc Team. All rights reserved.</p>
+            <p>&copy; 2026 javascc Team. a mod that adds quality.</p>
         </div>
     </footer>
 
