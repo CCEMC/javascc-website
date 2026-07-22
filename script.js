@@ -1,12 +1,10 @@
 ﻿document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
+    // 1. Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -17,7 +15,7 @@
         });
     });
 
-    // Add scroll listener for sticky nav effect
+    // 2. Sticky Nav Shadow
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -27,7 +25,7 @@
         }
     });
 
-    // FAQ Accordions
+    // 3. FAQ Accordion Toggle
     const faqQuestions = document.querySelectorAll('.faq-question');
     faqQuestions.forEach(question => {
         question.addEventListener('click', () => {
@@ -35,58 +33,82 @@
             item.classList.toggle('active');
         });
     });
-});
 
-// Feature Preview Tab Switcher
-function showTab(tabName) {
-    // Hide all contents
-    const contents = document.querySelectorAll('.tab-content');
-    contents.forEach(content => content.classList.remove('active'));
+    // 4. Feature Preview Tab Switcher (Event Delegation)
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabName = button.getAttribute('data-tab');
+            if (!tabName) return;
 
-    // Deactivate all tab buttons
-    const buttons = document.querySelectorAll('.tab-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
 
-    // Activate target content and button
-    const targetContent = document.getElementById('tab-' + tabName);
-    if (targetContent) {
-        targetContent.classList.add('active');
-    }
+            // Deactivate all tab buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
 
-    if (event && event.target) {
-        event.target.classList.add('active');
-    }
-}
-
-// Login Modal Controls
-function openLoginModal() {
-    const modal = document.getElementById('login-modal');
-    if (modal) {
-        modal.classList.add('active');
-    }
-}
-
-function closeLoginModal() {
-    const modal = document.getElementById('login-modal');
-    if (modal) {
-        modal.classList.remove('active');
-    }
-}
-
-function handleLogin(e) {
-    e.preventDefault();
-    const feedback = document.getElementById('login-feedback');
-    const username = document.getElementById('username').value;
-    
-    if (feedback) {
-        feedback.innerText = Welcome back, ! Authenticating client profile...;
-        setTimeout(() => {
-            closeLoginModal();
-            const navLogin = document.querySelector('.nav-login-btn');
-            if (navLogin) {
-                navLogin.innerText = Account ();
+            // Show selected tab content
+            const targetContent = document.getElementById('tab-' + tabName);
+            if (targetContent) {
+                targetContent.classList.add('active');
             }
-            alert(Signed in successfully as !);
-        }, 1200);
+
+            // Activate clicked button
+            button.classList.add('active');
+        });
+    });
+
+    // 5. Login Modal Event Listeners
+    const loginTrigger = document.getElementById('login-nav-trigger');
+    const loginModal = document.getElementById('login-modal');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+    const loginForm = document.getElementById('login-form');
+
+    if (loginTrigger && loginModal) {
+        loginTrigger.addEventListener('click', () => {
+            loginModal.classList.add('active');
+            loginModal.style.display = 'flex';
+        });
     }
-}
+
+    if (modalCloseBtn && loginModal) {
+        modalCloseBtn.addEventListener('click', () => {
+            loginModal.classList.remove('active');
+            loginModal.style.display = 'none';
+        });
+
+        // Close on background overlay click
+        loginModal.addEventListener('click', (e) => {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+                loginModal.style.display = 'none';
+            }
+        });
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const usernameInput = document.getElementById('username');
+            const feedback = document.getElementById('login-feedback');
+            const username = usernameInput ? usernameInput.value : 'User';
+
+            if (feedback) {
+                feedback.innerText = Welcome back, ! Authenticating profile...;
+            }
+
+            setTimeout(() => {
+                if (loginModal) {
+                    loginModal.classList.remove('active');
+                    loginModal.style.display = 'none';
+                }
+                if (loginTrigger) {
+                    loginTrigger.innerText = Account ();
+                }
+                alert(Signed in successfully as !);
+            }, 1000);
+        });
+    }
+});
