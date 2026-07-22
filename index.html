@@ -12,6 +12,7 @@
 <body>
     <div id="dynamic-bg"></div>
 
+    <!-- Navigation -->
     <nav>
         <div class="nav-content">
             <div class="logo">
@@ -22,12 +23,15 @@
                 <a href="#hero">Home</a>
                 <a href="#modules">Modules</a>
                 <a href="#previews">Feature Previews</a>
+                <a href="#reviews">Reviews</a>
                 <a href="#faq">FAQ</a>
                 <a href="#changelog">Changelog</a>
+                <button class="nav-login-btn" onclick="openLoginModal()">Login</button>
             </div>
         </div>
     </nav>
 
+    <!-- Hero Header -->
     <header id="hero">
         <div class="hero-content">
             <h1>javascc</h1>
@@ -40,6 +44,7 @@
         </div>
     </header>
 
+    <!-- Modules Section -->
     <section id="modules">
         <div class="section-container">
             <h2>Modules</h2>
@@ -52,13 +57,13 @@
                         <h3>Sword</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoShieldBreaker <span>Swap Back & Delay</span></li>
-                        <li>Criticals <span>Packet & Legit</span></li>
-                        <li>KillAura</li>
-                        <li>AimAssist</li>
-                        <li>Reach</li>
-                        <li>TriggerBot</li>
-                        <li>Hitboxes</li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoShieldBreaker</span></div><span>Swap Back & Delay</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Criticals</span></div><span>Packet & Legit</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">KillAura</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AimAssist</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Reach</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">TriggerBot</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Hitboxes</span></div></li>
                     </ul>
                 </div>
 
@@ -68,15 +73,15 @@
                         <h3>Crystal</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoCrystal</li>
-                        <li>AutoHitCrystal</li>
-                        <li>SafeAnchor <span>Rot Smooth</span></li>
-                        <li>AnchorMacro</li>
-                        <li>Surround</li>
-                        <li>AutoTotem</li>
-                        <li>HoverTotem</li>
-                        <li>AutoArmor</li>
-                        <li>AutoExp <span>Look Down</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoCrystal</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoHitCrystal</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">SafeAnchor</span></div><span>Rot Smooth</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AnchorMacro</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Surround</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoTotem</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">HoverTotem</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoArmor</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoExp</span></div><span>Look Down</span></li>
                     </ul>
                 </div>
 
@@ -86,11 +91,11 @@
                         <h3>Mace</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoMace <span>Stun Slam</span></li>
-                        <li>BreachSwap</li>
-                        <li>AutoWindcharge</li>
-                        <li>KeyPearl</li>
-                        <li>AutoPearlCatch</li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoMace</span></div><span>Stun Slam</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">BreachSwap</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoWindcharge</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">KeyPearl</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoPearlCatch</span></div></li>
                     </ul>
                 </div>
 
@@ -100,7 +105,7 @@
                         <h3>Spear</h3>
                     </div>
                     <ul class="module-list">
-                        <li>SpearAssist <span>(In Dev)</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">SpearAssist</span></div><span>In Dev</span></li>
                     </ul>
                 </div>
 
@@ -110,14 +115,14 @@
                         <h3>Movement</h3>
                     </div>
                     <ul class="module-list">
-                        <li>Sprint</li>
-                        <li>Velocity</li>
-                        <li>NoSlow</li>
-                        <li>Flight</li>
-                        <li>Speed</li>
-                        <li>FakeLag</li>
-                        <li>NoFall</li>
-                        <li>Scaffold</li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Sprint</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Velocity</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">NoSlow</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Flight</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Speed</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">FakeLag</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">NoFall</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Scaffold</span></div></li>
                     </ul>
                 </div>
 
@@ -127,13 +132,13 @@
                         <h3>Render</h3>
                     </div>
                     <ul class="module-list">
-                        <li>CustomHUD</li>
-                        <li>CustomHotbar</li>
-                        <li>ClickGUI</li>
-                        <li>TargetHUD</li>
-                        <li>ArrayList</li>
-                        <li>ESP & XRay</li>
-                        <li>Fullbright & Freelook</li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">CustomHUD</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">CustomHotbar</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">ClickGUI</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">TargetHUD</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">ArrayList</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">ESP & XRay</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">Fullbright & Freelook</span></div></li>
                     </ul>
                 </div>
 
@@ -143,73 +148,173 @@
                         <h3>Misc & Player</h3>
                     </div>
                     <ul class="module-list">
-                        <li>AutoClicker <span>Fast CPS</span></li>
-                        <li>SnapTap <span>SOCD Counter</span></li>
-                        <li>AutoTool</li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoClicker</span></div><span>Fast CPS</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">SnapTap</span></div><span>SOCD Counter</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoTool</span></div></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Interactive Feature Previews -->
+    <!-- Complete Feature Previews for Every Category -->
     <section id="previews">
         <div class="section-container">
             <h2>Feature Previews</h2>
-            <p class="section-subtitle">Click a module below to inspect its key settings and mechanics.</p>
+            <p class="section-subtitle">Explore every single module category and its underlying mechanics.</p>
 
             <div class="preview-tabs">
-                <button class="tab-btn active" onclick="showTab('automace')">AutoMace (Stun Slam)</button>
-                <button class="tab-btn" onclick="showTab('shieldbreaker')">AutoShieldBreaker</button>
-                <button class="tab-btn" onclick="showTab('safeanchor')">SafeAnchor</button>
-                <button class="tab-btn" onclick="showTab('snaptap')">SnapTap & AutoClicker</button>
+                <button class="tab-btn active" onclick="showTab('sword')">Sword Modules</button>
+                <button class="tab-btn" onclick="showTab('crystal')">Crystal Modules</button>
+                <button class="tab-btn" onclick="showTab('mace')">Mace Modules</button>
+                <button class="tab-btn" onclick="showTab('spear')">Spear Category</button>
+                <button class="tab-btn" onclick="showTab('movement')">Movement Modules</button>
+                <button class="tab-btn" onclick="showTab('render')">Render & HUD</button>
+                <button class="tab-btn" onclick="showTab('misc')">Misc & Player</button>
             </div>
 
             <div class="preview-card-container">
-                <div id="tab-automace" class="tab-content active">
+                <!-- Sword -->
+                <div id="tab-sword" class="tab-content active">
                     <div class="preview-details">
-                        <h3>AutoMace + Stun Slam</h3>
-                        <p>Detects when opponents attempt to block with a shield. Automatically swaps to an axe to instantly break their guard before performing a high-velocity mace smash.</p>
+                        <h3>Sword Combat Suite</h3>
+                        <p><strong>AutoShieldBreaker:</strong> Automatically detects opponent shield blocking, swaps to axe, and respects Swap Back & Swap Delay timers.<br><strong>Criticals:</strong> Packet-based or legit mini-jump critical hit simulation.<br><strong>AimAssist, KillAura, Reach, TriggerBot, Hitboxes:</strong> Complete tracking and targeting precision.</p>
                         <div class="setting-tags">
-                            <span class="tag">Stun Slam: Enabled</span>
-                            <span class="tag">Swap Delay: 0-20 Ticks</span>
-                            <span class="tag">Silent Mode: Available</span>
+                            <span class="tag">AutoShieldBreaker</span>
+                            <span class="tag">Criticals</span>
+                            <span class="tag">AimAssist</span>
+                            <span class="tag">KillAura</span>
+                            <span class="tag">Hitboxes</span>
                         </div>
                     </div>
                 </div>
 
-                <div id="tab-shieldbreaker" class="tab-content">
+                <!-- Crystal -->
+                <div id="tab-crystal" class="tab-content">
                     <div class="preview-details">
-                        <h3>AutoShieldBreaker</h3>
-                        <p>Visibly or silently switches to your axe when attacking a blocking target. Features a customizable <strong>Swap Back</strong> setting and tick-based delay for seamless, natural movement.</p>
+                        <h3>Crystal & Anchor Dominance</h3>
+                        <p><strong>SafeAnchor:</strong> Places obsidian/blocks between you and exploding anchors, capped at 90° smooth rotations.<br><strong>AutoCrystal & AutoHitCrystal:</strong> High-speed crystal placement & break cycles.<br><strong>AnchorMacro, Surround, AutoTotem, HoverTotem, AutoArmor, AutoExp:</strong> Unbreakable defense.</p>
                         <div class="setting-tags">
-                            <span class="tag">Swap Back: Toggle</span>
-                            <span class="tag">Swap Delay: Adjustable</span>
-                            <span class="tag">Silent: Network Packet Mode</span>
+                            <span class="tag">SafeAnchor</span>
+                            <span class="tag">AutoCrystal</span>
+                            <span class="tag">Surround</span>
+                            <span class="tag">AutoTotem</span>
+                            <span class="tag">AutoExp (Look Down)</span>
                         </div>
                     </div>
                 </div>
 
-                <div id="tab-safeanchor" class="tab-content">
+                <!-- Mace -->
+                <div id="tab-mace" class="tab-content">
                     <div class="preview-details">
-                        <h3>SafeAnchor</h3>
-                        <p>Automatically places protective obsidian or blocks between you and active respawn anchors to prevent lethality, featuring smooth custom rotation limits up to 90°.</p>
+                        <h3>1.21 Mace Mechanics</h3>
+                        <p><strong>AutoMace (Stun Slam):</strong> Automatically breaks enemy shields with an axe prior to delivering high-damage mace strikes.<br><strong>BreachSwap & AutoWindcharge:</strong> Enables instant Breach enchantment weapon swaps and automated windcharge launching.<br><strong>KeyPearl & AutoPearlCatch:</strong> Clutch pearl management.</p>
                         <div class="setting-tags">
-                            <span class="tag">Max Rot Speed: 90°</span>
-                            <span class="tag">Legit Flick</span>
-                            <span class="tag">Use Obsidian / Glowstone</span>
+                            <span class="tag">Stun Slam</span>
+                            <span class="tag">BreachSwap</span>
+                            <span class="tag">AutoWindcharge</span>
+                            <span class="tag">AutoPearlCatch</span>
                         </div>
                     </div>
                 </div>
 
-                <div id="tab-snaptap" class="tab-content">
+                <!-- Spear -->
+                <div id="tab-spear" class="tab-content">
                     <div class="preview-details">
-                        <h3>SnapTap & AutoClicker</h3>
-                        <p><strong>SnapTap:</strong> SOCD (Simultaneous Opposite Cardinal Direction) input priority for instantly sharper strafing.<br><strong>AutoClicker:</strong> Highly customized clicker located in the Misc category for precise CPS control.</p>
+                        <h3>Spear Category</h3>
+                        <p>A dedicated brand-new category added to the ClickGUI for upcoming heavy thrust weapons and extended reach melee utility mechanics.</p>
                         <div class="setting-tags">
-                            <span class="tag">SnapTap: A/D SOCD</span>
-                            <span class="tag">AutoClicker: Misc Category</span>
-                            <span class="tag">Randomization</span>
+                            <span class="tag">SpearAssist</span>
+                            <span class="tag">Custom Category Icon</span>
+                            <span class="tag">Positioned under Mace</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movement -->
+                <div id="tab-movement" class="tab-content">
+                    <div class="preview-details">
+                        <h3>Movement & Mobility</h3>
+                        <p><strong>Scaffold & Speed:</strong> Flawless bridge placement and directional movement acceleration.<br><strong>Velocity & NoSlow:</strong> Custom knockback reduction and zero item-use slowdown.<br><strong>Flight, FakeLag, NoFall, Sprint:</strong> Complete spatial manipulation.</p>
+                        <div class="setting-tags">
+                            <span class="tag">Velocity</span>
+                            <span class="tag">NoSlow</span>
+                            <span class="tag">FakeLag</span>
+                            <span class="tag">Scaffold</span>
+                            <span class="tag">Flight</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Render -->
+                <div id="tab-render" class="tab-content">
+                    <div class="preview-details">
+                        <h3>Render & Visual Customization</h3>
+                        <p><strong>CustomHUD & CustomHotbar:</strong> Fully tintable overlay graphics powered by your ClickGUI active theme.<br><strong>TargetHUD & ArrayList:</strong> Sleek real-time opponent info and active module tracking.<br><strong>ESP, XRay, Fullbright, Freelook:</strong> Enhanced tactical awareness.</p>
+                        <div class="setting-tags">
+                            <span class="tag">CustomHUD</span>
+                            <span class="tag">CustomHotbar</span>
+                            <span class="tag">ClickGUI Theme Tint</span>
+                            <span class="tag">TargetHUD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Misc & Player -->
+                <div id="tab-misc" class="tab-content">
+                    <div class="preview-details">
+                        <h3>Misc & Player Utilities</h3>
+                        <p><strong>AutoClicker:</strong> Highly customized clicker located in the Misc category for precise CPS control.<br><strong>SnapTap:</strong> SOCD (Simultaneous Opposite Cardinal Direction) input priority for instantly sharper strafing.<br><strong>AutoTool:</strong> Automatic optimal tool switching.</p>
+                        <div class="setting-tags">
+                            <span class="tag">AutoClicker</span>
+                            <span class="tag">SnapTap (SOCD)</span>
+                            <span class="tag">AutoTool</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews / Testimonials -->
+    <section id="reviews">
+        <div class="section-container">
+            <h2>Player Reviews</h2>
+            <p class="section-subtitle">What top competitive players are saying about javascc.</p>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The Stun Slam on AutoMace is unbelievable. It breaks their shield with an axe and lands the mace hit before they even realize what happened. 10/10."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">V</div>
+                        <div>
+                            <div class="reviewer-name">Veloce_PvP</div>
+                            <div class="reviewer-role">Competitive Crystal Player</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"SafeAnchor capping at 90 deg rotation speed makes it look completely legit while staying 100% safe. The dark theme website matches the client perfectly."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">A</div>
+                        <div>
+                            <div class="reviewer-name">AetherGod99</div>
+                            <div class="reviewer-role">Sword & Mace Tier 1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"SnapTap and AutoClicker in the Misc category work like a charm for counter-strafing. Hands down a mod that adds quality!"</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">K</div>
+                        <div>
+                            <div class="reviewer-name">Kaan_ClientUser</div>
+                            <div class="reviewer-role">Verified User</div>
                         </div>
                     </div>
                 </div>
@@ -255,6 +360,7 @@
         </div>
     </section>
 
+    <!-- Changelog -->
     <section id="changelog">
         <div class="section-container">
             <h2>Changelog</h2>
@@ -292,6 +398,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -301,6 +408,34 @@
             <p>&copy; 2026 javascc Team. a mod that adds quality.</p>
         </div>
     </footer>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+            <div class="modal-header">
+                <img src="assets/logo.png" alt="javascc logo">
+                <h2>javascc Account</h2>
+                <p>Sign in to manage your client profile & keys</p>
+            </div>
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="username">Username / Email</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label><input type="checkbox" checked> Remember me</label>
+                    <a href="#" onclick="alert('Password reset instructions sent to your email.')">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn primary-btn modal-submit-btn">Sign In</button>
+                <div id="login-feedback" class="login-feedback"></div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

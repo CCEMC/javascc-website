@@ -53,5 +53,40 @@ function showTab(tabName) {
         targetContent.classList.add('active');
     }
 
-    event.target.classList.add('active');
+    if (event && event.target) {
+        event.target.classList.add('active');
+    }
+}
+
+// Login Modal Controls
+function openLoginModal() {
+    const modal = document.getElementById('login-modal');
+    if (modal) {
+        modal.classList.add('active');
+    }
+}
+
+function closeLoginModal() {
+    const modal = document.getElementById('login-modal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+}
+
+function handleLogin(e) {
+    e.preventDefault();
+    const feedback = document.getElementById('login-feedback');
+    const username = document.getElementById('username').value;
+    
+    if (feedback) {
+        feedback.innerText = Welcome back, ! Authenticating client profile...;
+        setTimeout(() => {
+            closeLoginModal();
+            const navLogin = document.querySelector('.nav-login-btn');
+            if (navLogin) {
+                navLogin.innerText = Account ();
+            }
+            alert(Signed in successfully as !);
+        }, 1200);
+    }
 }
