@@ -96,17 +96,28 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 800;
     letter-spacing: -2px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
     background: linear-gradient(180deg, #fff 0%, #666 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.hero-content p {
+.hero-tagline {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-main);
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    text-transform: lowercase;
+    opacity: 0.9;
+    animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards;
+}
+
+.hero-subtext {
     font-size: 1.25rem;
     color: var(--text-muted);
     max-width: 600px;
@@ -155,7 +166,7 @@ nav {
 .section-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 8rem 2rem;
+    padding: 6rem 2rem;
 }
 
 h2 {
@@ -211,20 +222,150 @@ h2 {
     font-weight: 300;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
 }
 
 .module-list li::before {
     content: "▹";
     color: var(--text-main);
+    margin-right: 0.5rem;
 }
 
 .module-list li span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 0.2rem 0.6rem;
     background: rgba(255,255,255,0.1);
     border-radius: 20px;
     color: #fff;
+}
+
+/* Interactive Feature Previews */
+.preview-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-muted);
+    padding: 0.8rem 1.8rem;
+    border-radius: 30px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: var(--text-main);
+    color: var(--bg-color);
+    border-color: var(--text-main);
+}
+
+.preview-card-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-content {
+    display: none;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 3rem;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.preview-details h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.preview-details p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.setting-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid var(--glass-border);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-family: var(--font-main);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: "+";
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 2rem;
+    color: var(--text-muted);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 0 2rem 1.5rem 2rem;
 }
 
 /* Timeline / Changelog */
@@ -331,8 +472,14 @@ footer p {
     to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 3rem; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .hero-tagline { font-size: 1.4rem; }
     .nav-links { display: none; }
     .hero-actions { flex-direction: column; }
     .footer-content { flex-direction: column; gap: 2rem; text-align: center; }

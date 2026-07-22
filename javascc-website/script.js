@@ -26,4 +26,32 @@
             nav.style.boxShadow = 'none';
         }
     });
+
+    // FAQ Accordions
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
+        });
+    });
 });
+
+// Feature Preview Tab Switcher
+function showTab(tabName) {
+    // Hide all contents
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // Deactivate all tab buttons
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Activate target content and button
+    const targetContent = document.getElementById('tab-' + tabName);
+    if (targetContent) {
+        targetContent.classList.add('active');
+    }
+
+    event.target.classList.add('active');
+}
