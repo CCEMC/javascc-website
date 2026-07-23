@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 5. Login Modal Event Listeners
+    let isSignedIn = false;
     const loginTrigger = document.getElementById('login-nav-trigger');
     const loginModal = document.getElementById('login-modal');
     const modalCloseBtn = document.getElementById('modal-close-btn');
     const loginForm = document.getElementById('login-form');
+    const downloadBtn = document.getElementById('download-btn');
 
     if (loginTrigger && loginModal) {
         loginTrigger.addEventListener('click', () => {
@@ -100,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             setTimeout(() => {
+                isSignedIn = true;
                 if (loginModal) {
                     loginModal.classList.remove('active');
                     loginModal.style.display = 'none';
@@ -109,6 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 alert(`Signed in successfully as ${username}!`);
             }, 1000);
+        });
+    }
+
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!isSignedIn) {
+                alert('You must be signed in to download javascc.');
+                if (loginModal) {
+                    loginModal.classList.add('active');
+                    loginModal.style.display = 'flex';
+                }
+            } else {
+                alert('Downloading javascc v1.0.jar...');
+            }
         });
     }
 });

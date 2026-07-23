@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@
             <p class="hero-tagline">a mod that adds quality</p>
             <p class="hero-subtext">The highest performance crystal and sword PvP utility client, precision-engineered for 1.21+.</p>
             <div class="hero-actions">
-                <a href="#" class="btn primary-btn">Download v1.0</a>
+                <a href="#" class="btn primary-btn" id="download-btn">Download v1.0</a>
                 <a href="#previews" class="btn secondary-btn">Explore Features</a>
             </div>
         </div>
@@ -150,6 +150,8 @@
                     <ul class="module-list">
                         <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoClicker</span></div><span>Fast CPS</span></li>
                         <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">SnapTap</span></div><span>SOCD Counter</span></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">FastBreak</span></div></li>
+                        <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">FastPlace</span></div></li>
                         <li><div class="mod-info"><span class="mod-bullet">▹</span><span class="mod-name">AutoTool</span></div></li>
                     </ul>
                 </div>
@@ -264,10 +266,12 @@
                 <div id="tab-misc" class="tab-content">
                     <div class="preview-details">
                         <h3>Misc & Player Utilities</h3>
-                        <p><strong>AutoClicker:</strong> Highly customized clicker located in the Misc category for precise CPS control.<br><strong>SnapTap:</strong> SOCD (Simultaneous Opposite Cardinal Direction) input priority for instantly sharper strafing.<br><strong>AutoTool:</strong> Automatic optimal tool switching.</p>
+                        <p><strong>AutoClicker:</strong> Highly customized clicker located in the Misc category for precise CPS control.<br><strong>SnapTap:</strong> SOCD (Simultaneous Opposite Cardinal Direction) input priority for instantly sharper strafing.<br><strong>FastBreak & FastPlace:</strong> Break and place blocks at maximum speeds with zero delay.<br><strong>AutoTool:</strong> Automatic optimal tool switching.</p>
                         <div class="setting-tags">
                             <span class="tag">AutoClicker</span>
                             <span class="tag">SnapTap (SOCD)</span>
+                            <span class="tag">FastBreak</span>
+                            <span class="tag">FastPlace</span>
                             <span class="tag">AutoTool</span>
                         </div>
                     </div>
@@ -285,24 +289,24 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
-                    <p class="review-text">"The Stun Slam on AutoMace is unbelievable. It breaks their shield with an axe and lands the mace hit before they even realize what happened. 10/10."</p>
-                    <div class="reviewer-info">
-                        <div class="reviewer-avatar">V</div>
-                        <div>
-                            <div class="reviewer-name">Veloce_PvP</div>
-                            <div class="reviewer-role">Competitive Crystal Player</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-stars">★★★★★</div>
                     <p class="review-text">"SafeAnchor capping at 90 deg rotation speed makes it look completely legit while staying 100% safe. The dark theme website matches the client perfectly."</p>
                     <div class="reviewer-info">
                         <div class="reviewer-avatar">A</div>
                         <div>
                             <div class="reviewer-name">AetherGod99</div>
                             <div class="reviewer-role">Sword & Mace Tier 1</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The Stun Slam on AutoMace is unbelievable. It breaks their shield with an axe and lands the mace hit before they even realize what happened. 10/10."</p>
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">V</div>
+                        <div>
+                            <div class="reviewer-name">Veloce_PvP</div>
+                            <div class="reviewer-role">Competitive Crystal Player</div>
                         </div>
                     </div>
                 </div>
@@ -405,7 +409,7 @@
                 <img src="assets/logo.png" alt="javascc logo">
                 <span>javascc</span>
             </div>
-            <p>&copy; 2026 javascc Team. a mod that adds quality.</p>
+            <p>&copy; 2026 javascc Team. All rights reserved.</p>
         </div>
     </footer>
 
@@ -432,6 +436,7 @@
                     <a href="#" onclick="alert('Password reset instructions sent to your email.'); return false;">Forgot password?</a>
                 </div>
                 <button type="submit" class="btn primary-btn modal-submit-btn">Sign In</button>
+                <button type="button" class="btn secondary-btn" style="width: 100%; margin-top: 10px;" onclick="alert('Registration flow coming soon!'); return false;">Do not have an account? Register</button>
                 <div id="login-feedback" class="login-feedback"></div>
             </form>
         </div>
